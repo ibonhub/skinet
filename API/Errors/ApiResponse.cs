@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 
 namespace API.Errors
 {
@@ -14,10 +15,10 @@ namespace API.Errors
         {
             return statusCode switch
             {
-                400 => "bad request",
-                401 => "authorization",
-                404 => "not found",
-                500 => "server error",
+                (int)HttpStatusCode.BadRequest => "bad request",
+                (int)HttpStatusCode.Unauthorized => "bad authorization",
+                (int)HttpStatusCode.NotFound => "not found",
+                (int)HttpStatusCode.InternalServerError => "server error",
                 _ => null
             };
         }
