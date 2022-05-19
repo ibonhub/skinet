@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IProduct } from '../shared/models/product';
 
 @Component({
   selector: 'app-shop',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shop.component.scss']
 })
 export class ShopComponent implements OnInit {
+  products: IProduct[];
 
   constructor() { }
 
