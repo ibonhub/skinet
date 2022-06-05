@@ -39,7 +39,7 @@ export class TestErrorComponent implements OnInit {
     });
   }
 
-  get400Validationerror() {
+  get400ValidationError() {
     this.http.get(this.baseUrl + 'products/fortytwo').subscribe(response => {
       console.log(response);
     }, error => {
